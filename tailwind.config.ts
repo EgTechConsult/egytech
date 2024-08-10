@@ -1,21 +1,27 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
   prefix: "",
   theme: {
     container: {
       center: true,
-      padding: "15px",
+      padding: "0",
     },
     screens: {
       "2xl": "1400px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      xs: "480px",
+      xxl: "1920px",
     },
     fontFamily: {
       primary: "var(--font-jetBrainsMono)",
@@ -23,14 +29,17 @@ const config = {
     extend: {
       colors: {
         purple: "#532B88",
+        background: "#2A1454",
+        pink: "#f72585",
         font: {
           primary: "#F4EFFA",
-          secondary: "#F4EFFA"
+          secondary: "#2A1454",
+          primary_light: "#8651F6",
         },
         accent: {
-          DEFAULT: "#C8B1E4",
-          hover: "#9B72CF"
-        }
+          DEFAULT: "##9B72CF",
+          hover: "#C8B1E4",
+        },
       },
       keyframes: {
         "accordion-down": {
@@ -49,6 +58,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;
