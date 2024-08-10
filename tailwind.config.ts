@@ -12,12 +12,26 @@ const config = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
+      padding: "15px",
+    },
+    screens: {
+      "2xl": "1400px",
+    },
+    fontFamily: {
+      primary: "var(--font-jetBrainsMono)",
     },
     extend: {
+      colors: {
+        purple: "#532B88",
+        font: {
+          primary: "#F4EFFA",
+          secondary: "#F4EFFA"
+        },
+        accent: {
+          DEFAULT: "#C8B1E4",
+          hover: "#9B72CF"
+        }
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
