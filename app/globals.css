@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-primary leading-loose;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-font-primary font-semibold;
+  }
+}
