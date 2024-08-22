@@ -1,7 +1,7 @@
 import { JetBrains_Mono } from "next/font/google";
 import { ReactNode } from "react";
 import { ThemeProvider } from "@mui/material/styles";
-import { CssBaseline } from "@mui/material";
+import { CssBaseline, Toolbar } from "@mui/material";
 import theme from "../styles/theme";
 import "./globals.css";
 import { Box } from "@mui/material";
@@ -27,6 +27,7 @@ export default function RootLayout({
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <ResponsiveAppBar />
+          <Toolbar></Toolbar>
           <Box component="main" sx={mainContentStyles}>
             {children}
           </Box>
