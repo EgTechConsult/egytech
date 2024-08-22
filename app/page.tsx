@@ -1,5 +1,11 @@
 import Image from "next/image";
+import { Container } from "postcss";
+import HomePage from "../components/HomePage";
 
 export default function Home() {
-  return <main>Homepage!</main>;
+  return (
+    <main>
+      <HomePage />
+    </main>
+  );
 }
