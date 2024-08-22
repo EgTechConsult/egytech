@@ -14,7 +14,10 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
-import { appBarStyles } from "../../styles/appBarStyle";
+import {
+  appBarIconStyle,
+  appBarContainerStyle,
+} from "../../styles/appBarStyle";
 
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -43,9 +46,9 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar sx={appBarStyles}>
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
+    <AppBar sx={appBarIconStyle}>
+      <Container maxWidth="xl" sx={appBarContainerStyle}>
+        <Toolbar disableGutters >
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
           <Typography
             variant="h6"

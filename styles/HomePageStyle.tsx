@@ -1,26 +1,26 @@
-import { SxProps, Theme } from "@mui/material/styles";
+import { SxProps, Theme, ThemeOptions } from "@mui/material/styles";
 
-export const homePageContainerStyle: SxProps<Theme> = {
+export const homePageContainerStyle: SxProps<Theme> = (theme) => ({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
   height: "100vh",
   maxWidth: "100%",
-  backgroundColor: (theme) => theme.palette.secondary.light, // Set the background color
-};
+  backgroundColor: theme.custom?.primary?.background_1, // Set the background color
+});
 
-export const homePageTitleStyle: SxProps<Theme> = {
+export const homePageTitleStyle: SxProps<Theme> = (theme) => ({
   fontWeight: "bold",
-  color: (theme) => theme.typography.h2,
+  color: theme.custom?.primary?.background_text_1,
   marginBottom: "20px",
   textAlign: "center",
   "@media (max-width: 600px)": {
     fontSize: "2rem",
   },
-};
+});
 
-export const homePageDescriptionStyle: SxProps<Theme> = {
-  fontSize: (theme) => theme.typography.body1.fontSize,
-  color: "#666",
+export const homePageDescriptionStyle: SxProps<Theme> = (theme) => ({
+  fontSize: theme.typography.body1.fontSize,
+  color: theme.custom?.primary?.background_text_1,
   textAlign: "left",
-};
+});
